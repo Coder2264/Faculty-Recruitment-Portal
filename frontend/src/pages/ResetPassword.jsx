@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState} from 'react';
 import mail from '../assets/mail.png';
-import lock from '../assets/lock.png';
+import lock from '../assets/lock.jpg';
 import logo from '../assets/logo.png';
 import Header from '../components/Header.jsx';
 import Blinking from '../components/Blinking.jsx';

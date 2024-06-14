@@ -230,6 +230,7 @@ function Form1() {
                                 <Logout />
                             </div>
                         </div>
+                        
                         <div className='flex-col xl:flex xl:flex-row w-full'>
                             <div className=' w-full'>
                                 <div className='flex-col xl:flex xl:flex-row p-2 m-2 justify-between gap-3'>
@@ -272,7 +273,7 @@ function Form1() {
                                 </div>
                             </div >
                         </div>
-                        <div class="border-[0.05rem] border-blue-950 border-dashed mt-4 mx-3"></div>
+                        <div className="border-[0.05rem] border-blue-950 border-dashed mt-4 mx-3"></div>
                     </div>
                     <div className='flex flex-wrap justify-between  bg-white border-2 border-black rounded-lg shadow-xl hover:shadow-blue-300 xl:p-0 m-3 mt-6'>
                         <div className=' bg-[#DFF0D8] w-full rounded-md p-3 flex flex-wrap justify-between shadow-md shadow-green-900'>

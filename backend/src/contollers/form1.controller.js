@@ -7,7 +7,7 @@ import { ApiResponse } from "../utils/ApiResponse.js";
 const getForm1 = asyncHandler(async (req, res) => {
     const user=req.user;
     const form1Data = await Form1.findOne({ owner:user._id });
-    // console.log(form1Data);
+     console.log(form1Data);
     if(form1Data){
         return res.status(200)
                 .json(new ApiResponse(

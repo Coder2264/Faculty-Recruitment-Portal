@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState} from 'react';
 import mail from '../assets/mail.png';
-import lock from '../assets/lock.png';
+import lock from '../assets/lock.jpg';
 import logo from '../assets/logo.png';
 import Header from '../components/Header.jsx';
 import Blinking from '../components/Blinking.jsx';
@@ -57,8 +57,8 @@ function Login() {
             <ToastContainer/>
             <div   className='flex flex-wrap justify-between  xl:mx-60 bg-white border-2 border-black rounded-lg shadow-xl shadow-blue-300 m-3 xl:p-0'>
                 <div className="p-8  w-full xl:w-[500px] flex justify-center"><img src={logo}  className="h-auto w-[300px] " alt="IITP logo" /></div>
-                <div class="bg-white p-8 rounded-lg xl:w-[450px] shadow-md w-full mt-16 xl:mt-0 ">
-                <h3 class="text-2xl font-semibold mb-4 text-center" ><u>LOGIN HERE</u></h3>
+                <div className="bg-white p-8 rounded-lg xl:w-[450px] shadow-md w-full mt-16 xl:mt-0 ">
+                <h3 className="text-2xl font-semibold mb-4 text-center" ><u>LOGIN HERE</u></h3>
                 <form onSubmit={loginUser} >
                     <div className="mb-4 flex items-center ">
                         <img src={mail} className=" w-12 h-[42px] mt-1 p-[1.5px]" alt="mail" />

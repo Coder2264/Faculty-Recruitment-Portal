@@ -1,13 +1,14 @@
 import React from 'react'
+import axios from 'axios';
 import { useState} from 'react';
-import lock from '../assets/lock.png';
+import lock from '../assets/lock.jpg';
 import logo from '../assets/logo.png';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Header from '../components/Header.jsx';
 import Blinking from '../components/Blinking.jsx';
 import { Link ,useNavigate, useParams} from 'react-router-dom';
-import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 function Changepassword() {
     const [data, setData] = useState({
