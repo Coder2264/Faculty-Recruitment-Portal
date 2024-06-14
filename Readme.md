@@ -18,6 +18,25 @@ Welcome to the Faculty-recruitment Portal! This project is a web-based system th
 
 ## Screenshots of the Portal
 
+![Log in](https://res.cloudinary.com/dftyqcjar/image/upload/v1718346851/MyStorage/sb5tk6oem1twqqoov1co.png)
+
+![Sign Up](https://res.cloudinary.com/dftyqcjar/image/upload/v1718346852/MyStorage/l5zuw9zwertitbluxrlk.png)
+
+![Forgot Password](https://res.cloudinary.com/dftyqcjar/image/upload/v1718346852/MyStorage/ajwyzlovjvmpr42ocmyh.png)
+
+![Screenshot 1](https://res.cloudinary.com/dftyqcjar/image/upload/v1718345250/MyStorage/amvimt3ecwpelmpyylqh.png)
+
+![Screenshot 2](https://res.cloudinary.com/dftyqcjar/image/upload/v1718345250/MyStorage/egul7pzwforqxeevwxn4.png)
+
+![Screenshot 3](https://res.cloudinary.com/dftyqcjar/image/upload/v1718345250/MyStorage/vtdla265m9eenqfam8rg.png)
+
+![Screenshot 4](https://res.cloudinary.com/dftyqcjar/image/upload/v1718345250/MyStorage/lnem6q8np08rf7c8pwgy.png)
+
+![Screenshot 5](https://res.cloudinary.com/dftyqcjar/image/upload/v1718345251/MyStorage/jfg0tg47vbyg23iju76l.png)
+
+![Screenshot 6](https://res.cloudinary.com/dftyqcjar/image/upload/v1718345251/MyStorage/ejlmydqwm3euf0kbeomz.png)
+
+
 
 ## Demo Video
 
@@ -91,7 +110,7 @@ Make sure you have the following software installed on your local machine:
 4. **Set up environment variables**
     Create a `.env` file in the `backend` directory and add your configuration details:
     ```env
-    PORT=
+    PORT= 8000
     MONGODB_URI=
     CORS_ORIGIN=
     ACCESS_TOKEN_SECRET=
@@ -103,8 +122,8 @@ Make sure you have the following software installed on your local machine:
     CLOUDINARY_API_KEY=
     CLOUDINARY_API_SECRET=
     
-    FRONTEND_URL=
-    BACKEND_URL=
+    FRONTEND_URL= http://localhost:5173
+    BACKEND_URL= http://localhost:8000
     
     EMAIL_ADDRESS=
     EMAIL_PASSWORD=
@@ -125,6 +144,11 @@ Make sure you have the following software installed on your local machine:
     docker-compose up
     ```
 
+## DockerHub Images
+
+You can find the Docker images for the Faculty Recruitment Portal on DockerHub. Click the link below to view the images:
+
+[Faculty Recruitment Portal Docker Images](https://hub.docker.com/r/kamran676446/faculty-recruitment-portal/tags)
 
 
 ## License
