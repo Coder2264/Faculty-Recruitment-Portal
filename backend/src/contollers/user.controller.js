@@ -7,6 +7,8 @@ import jwt from "jsonwebtoken"
 import nodemailer from 'nodemailer'
 import mongoose from "mongoose";
 import bcrypt from "bcrypt"
+import dotenv from "dotenv"
+dotenv.config()
 
 const generateAccessAndRefereshTokens = async(userId) =>{
     try {
@@ -41,9 +43,7 @@ const registerUser=asyncHandler( async (req,res) =>{
         [firstname, email, lastname , category, password].some((field) => field?.trim() === "")
     ) {
         throw new ApiError(400, "All fields are required")
-        // return res.status(400).json(
-        //     new ApiResponse(400, {}, "All fields are required")
-        // )
+        
     }
 
     const existedUser = await User.findOne({email})
@@ -69,9 +69,6 @@ const registerUser=asyncHandler( async (req,res) =>{
 
     if (!createdUser) {
         throw new ApiError(500, "Something went wrong while registering the user")
-        // return res.status(500).json(
-        //     new ApiResponse(500, {}, "Something went wrong while registering the user")
-        // )
     }
 
     return res.status(201).json(
@@ -114,11 +111,8 @@ const loginUser = asyncHandler(async (req, res) =>{
     const loggedInUser = await User.findById(user._id).select("-password -refreshToken")
 
     const options = {
-        httpOnly: true,
-        // secure: true
+        httpOnly: true
     }
-    // res.cookie("access","token");
-    // console.log(res.cookies);
     return res 
     .status(200)
     .cookie("accessToken", accessToken,options)
@@ -264,7 +258,7 @@ const resetUserPassword = asyncHandler(async (req, res) =>{
         }
     )
    
-    const toVisit=`http://localhost:5173/reset-password/${user._id}/${token}`;
+    const toVisit=`${process.env.FRONTEND_URL}/reset-password/${user._id}/${token}`;
     console.log(toVisit);
     const testAccount=await nodemailer.createTestAccount();
 
@@ -273,16 +267,16 @@ const resetUserPassword = asyncHandler(async (req, res) =>{
         host: "smtp.gmail.email",
         port: 587,
         auth: {
-            user: 'rachet032007@gmail.com',
-            pass: 'pcvt rzqd olos ariw'
+            user: process.env.EMAIL_ADDRESS,
+            pass: process.env.EMAIL_PASSWORD
         },
       });
 
       async function main() {
         // send mail with defined transport object
         const info = await transporter.sendMail({
-          from: 'rachet032007@gmail.com', // sender address
-          to: `${email}`, // list of receivers TODO: change this email to email provided
+          from: process.env.EMAIL_ADDRESS, // sender address
+          to: `${email}`, // list of receivers
           subject: "Here is the link for Resetting your password for the faculty recruitment IIT PATNA website", // Subject line
           text: `${toVisit}`, // plain text body
         });
